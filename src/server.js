@@ -11,7 +11,7 @@ const apiV2 = require("./v2/index.js");
 app.use("/v2", apiV2);
 
 app.use((error, request, response, next) => {
-    console.log(error.message);
+	console.log(error.message);
 	response.json({
 		message:"Error occured!",
 		error: error.message
